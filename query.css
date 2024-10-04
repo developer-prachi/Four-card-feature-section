@@ -1,0 +1,65 @@
+/*****************************************************/
+/*BELOW 1200px (Landscape tablets)/*
+/*****************************************************/
+@media (max-width: 75em) {
+  body {
+    padding: 6rem;
+  }
+}
+/*****************************************************/
+/*BELOW 944px ( tablets)/*
+/*****************************************************/
+@media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/*****************************************************/
+/*BELOW 704px ( smaller tablets)/*
+/*****************************************************/
+@media (max-width: 44em) {
+  html {
+    /* 7/16 */
+    font-size: 43%;
+    gap: 1rem;
+  }
+  .content {
+    width: auto;
+  }
+}
+
+/*****************************************************/
+/*BELOW 544px ( phones)/*
+/*****************************************************/
+
+@media (max-width: 544px) {
+  .heading {
+    font-size: 2rem;
+    margin-bottom: 0rem;
+  }
+  .sub-heading {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  body {
+    padding: 4rem;
+  }
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+  .one,
+  .two,
+  .three,
+  .four {
+    grid-column: auto;
+    grid-row: auto;
+    padding: 1rem;
+  }
+
+  .content {
+    width: auto;
+  }
+}
+
+/* The issue with your code is that you have set a grid row definition (grid-row: 1/-1) for the .one and .four classes. This forces them to span multiple rows, even when the viewport shrinks and the .main-container switches to a single column layout. */
